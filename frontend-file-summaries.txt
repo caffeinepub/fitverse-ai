@@ -1,0 +1,5 @@
+{
+  "frontend/src/App.tsx": "Main application entry point that sets up TanStack Router with five routes (Landing, Shop, Trial Hub, Body Scan, Wardrobe), wraps everything in AppProvider for global state, and uses two layout components — one with Sidebar+AnimatedBackground for inner pages and one without sidebar for the landing page.",
+  "frontend/src/lib/utils.ts": "Utility helper that exports the `cn` function combining clsx and tailwind-merge for conditional className merging throughout the app.",
+  "frontend/src/pages/Wardrobe.tsx": "Complete Wardrobe AI page with simulated scanning interface (animated rings, progress bar, corner brackets), post-scan analytics dashboard showing category breakdowns and a recharts BarChart for color distribution, and global wardrobe state updates via AppContext."
+}

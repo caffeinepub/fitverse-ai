@@ -1,0 +1,135 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "FitVerse AI — a futuristic AI-powered fashion e-commerce web app with glassmorphism UI, purple/neon blue/pink gradients, animated backgrounds, and 5 core pages: Landing, Shop, Trial Hub, Body Scan AI, and Wardrobe AI. Features include AI avatar animation, product trial cart (max 5 items), keep/return flow, simulated body scan with size recommendations, and wardrobe analytics dashboard.",
+  "architectural_notes": [
+    "Multi-page SPA with client-side routing between Landing, Shop, Trial Hub, Body Scan AI, and Wardrobe AI pages",
+    "Global state management required for trial cart (max 5 items), body scan results, and wardrobe scan data shared across pages",
+    "Glassmorphism design system: frosted glass cards, soft shadows, rounded corners, purple/neon blue/pink gradient palette"
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "imageRequirements": "## Required Images\n- Futuristic digital humanoid avatar in a glowing purple-blue gradient outfit, standing with arms slightly out, surrounded by holographic clothing particles — centered on a dark background (ai-avatar-hero.dim_600x700.png)\n- Abstract animated-style gradient mesh background with deep purple, electric blue, and hot pink flowing colors — wide format (gradient-mesh-bg.dim_1920x1080.png)\n- Stylized neon clothing hanger icon with a glowing pink-blue gradient outline on transparent background (wardrobe-icon.dim_128x128.png)\n- Futuristic body scan silhouette outline glowing in neon blue on a dark background, with scan lines and measurement markers (body-scan-illustration.dim_400x600.png)\n- Abstract AI chip / neural network icon with neon purple and blue circuit lines on transparent background (ai-chip-icon.dim_128x128.png)",
+  "existing_features": [
+    {
+      "id": "feature-apply-a-glassmorphism-ui-design-system-with-soft-purple-neon-blue-and-pink-gradient-accents-throughout-the-entire-app-use-animated-particle-gradient-mesh-backgrounds-rounded-corners-soft-glowing-shadows-clean-futuristic-typography-and-a-premium-apple-ai-startup-aesthetic-all-buttons-must-have-floating-glow-effects-and-micro-animations-on-hover-page-transitions-must-be-smooth-and-fluid",
+      "title": "Apply a glassmorphism UI design system with soft purple, neon blue, and pink gradient accents throughout the entire app. Use animated particle/gradient mesh backgrounds, rounded corners, soft glowing shadows, clean futuristic typography, and a premium Apple + AI startup aesthetic. All buttons must have floating glow effects and micro-animations on hover. Page transitions must be smooth and fluid.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-floating-animated-sidebar-navigation-component-that-appears-on-all-pages-except-the-landing-page-hero-with-links-to-landing-shop-trial-hub-body-scan-ai-and-wardrobe-ai-the-sidebar-must-have-micro-animations-on-each-nav-item-hover-and-a-glowing-active-indicator",
+      "title": "Create a floating animated sidebar navigation component that appears on all pages (except the landing page hero) with links to: Landing, Shop, Trial Hub, Body Scan AI, and Wardrobe AI. The sidebar must have micro-animations on each nav item hover and a glowing active indicator.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-the-landing-page-with-hero-headline-shop-smart-try-smart-dress-smart-a-subheadline-describing-the-ai-powered-trial-hub-body-scan-and-wardrobe-intelligence-features-three-cta-buttons-start-shopping-scan-my-body-scan-my-wardrobe-and-an-animated-ai-avatar-illustration-of-a-digital-figure-trying-on-clothes-clicking-start-shopping-navigates-to-the-shop-page-scan-my-body-navigates-to-the-body-scan-ai-page-and-scan-my-wardrobe-navigates-to-the-wardrobe-ai-page",
+      "title": "Build the Landing Page with: hero headline 'Shop Smart. Try Smart. Dress Smart.', a subheadline describing the AI-powered trial hub, body scan, and wardrobe intelligence features, three CTA buttons ('Start Shopping', 'Scan My Body', 'Scan My Wardrobe'), and an animated AI avatar illustration of a digital figure trying on clothes. Clicking 'Start Shopping' navigates to the Shop page, 'Scan My Body' navigates to the Body Scan AI page, and 'Scan My Wardrobe' navigates to the Wardrobe AI page.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-the-shop-page-with-a-product-grid-containing-at-least-10-mock-products-across-categories-t-shirts-jeans-tops-kurtas-and-dresses-each-product-card-must-display-product-image-name-price-size-selector-xs-s-m-l-xl-ai-fit-confidence-badge-and-an-add-to-trial-button-limit-trial-selection-to-a-maximum-of-5-items-total-once-5-are-selected-disable-all-remaining-add-to-trial-buttons-show-a-dynamic-trial-cart-side-panel-listing-selected-items-include-a-send-to-trial-hub-button-in-the-trial-cart-that-navigates-to-the-trial-hub-page-if-the-user-has-completed-a-body-scan-and-selects-a-size-that-doesn-t-match-their-recommended-size-show-a-warning-popup-this-size-may-not-fit-you-recommended-m-if-the-user-has-completed-a-wardrobe-scan-and-selects-a-product-similar-to-an-already-owned-item-show-a-popup-you-already-own-5-pink-tops-are-you-sure-you-want-another",
+      "title": "Build the Shop Page with a product grid containing at least 10 mock products across categories: T-shirts, Jeans, Tops, Kurtas, and Dresses. Each product card must display: product image, name, price, size selector (XS/S/M/L/XL), AI Fit Confidence % badge, and an 'Add to Trial' button. Limit trial selection to a maximum of 5 items total — once 5 are selected, disable all remaining 'Add to Trial' buttons. Show a dynamic Trial Cart side panel listing selected items. Include a 'Send to Trial Hub' button in the Trial Cart that navigates to the Trial Hub page. If the user has completed a Body Scan and selects a size that doesn't match their recommended size, show a warning popup: 'This size may not fit you. Recommended: M'. If the user has completed a Wardrobe Scan and selects a product similar to an already-owned item, show a popup: 'You already own 5 pink tops. Are you sure you want another?'",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-the-trial-hub-page-that-displays-the-up-to-5-items-selected-from-the-shop-each-item-shows-product-image-selected-size-a-keep-button-and-a-return-button-clicking-keep-marks-the-item-with-a-green-highlight-and-purchased-label-with-an-animated-confirmation-effect-clicking-return-marks-the-item-with-a-red-highlight-and-returned-label-with-an-animated-confirmation-effect-use-react-component-state-to-track-each-item-s-status-neutral-kept-returned",
+      "title": "Build the Trial Hub Page that displays the up to 5 items selected from the Shop. Each item shows: product image, selected size, a 'Keep' button, and a 'Return' button. Clicking 'Keep' marks the item with a green highlight and 'Purchased' label with an animated confirmation effect. Clicking 'Return' marks the item with a red highlight and 'Returned' label with an animated confirmation effect. Use React component state to track each item's status (neutral / kept / returned).",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-the-body-scan-ai-page-with-a-simulated-camera-ui-frame-an-animated-scanning-overlay-e-g-pulsing-scan-line-or-ring-effect-and-a-start-scan-button-after-clicking-start-scan-play-a-scan-animation-for-a-few-seconds-then-display-detected-body-measurements-shoulder-chest-waist-and-height-use-realistic-mock-values-display-a-recommended-size-result-card-your-ideal-size-m-store-the-recommended-size-in-app-state-so-the-shop-page-can-use-it-to-trigger-size-mismatch-warnings",
+      "title": "Build the Body Scan AI Page with a simulated camera UI frame, an animated scanning overlay (e.g., pulsing scan line or ring effect), and a 'Start Scan' button. After clicking 'Start Scan', play a scan animation for a few seconds, then display detected body measurements: Shoulder, Chest, Waist, and Height (use realistic mock values). Display a recommended size result card: 'Your Ideal Size: M'. Store the recommended size in app state so the Shop page can use it to trigger size mismatch warnings.",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-the-wardrobe-ai-page-with-a-simulated-wardrobe-scanning-interface-animated-camera-frame-or-image-upload-zone-after-triggering-the-scan-display-an-analytics-dashboard-showing-count-of-tops-owned-count-of-jeans-owned-and-a-color-distribution-chart-bar-or-donut-chart-showing-wardrobe-color-breakdown-store-wardrobe-data-in-app-state-so-the-shop-page-can-check-for-duplicate-item-warnings-e-g-if-the-user-already-owns-multiple-items-of-the-same-category-and-color",
+      "title": "Build the Wardrobe AI Page with a simulated wardrobe scanning interface (animated camera frame or image upload zone). After triggering the scan, display an analytics dashboard showing: count of tops owned, count of jeans owned, and a color distribution chart (bar or donut chart) showing wardrobe color breakdown. Store wardrobe data in app state so the Shop page can check for duplicate item warnings (e.g., if the user already owns multiple items of the same category and color).",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-shared-global-app-state-using-react-context-or-react-query-state-to-store-1-the-trial-cart-items-max-5-2-the-body-scan-recommended-size-3-the-wardrobe-analytics-data-this-shared-state-must-persist-throughout-the-session-and-be-accessible-across-the-shop-trial-hub-body-scan-ai-and-wardrobe-ai-pages",
+      "title": "Create a shared global app state (using React Context or React Query state) to store: (1) the trial cart items (max 5), (2) the body scan recommended size, (3) the wardrobe analytics data. This shared state must persist throughout the session and be accessible across the Shop, Trial Hub, Body Scan AI, and Wardrobe AI pages.",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Landing page with hero headline, CTA buttons, and animated AI avatar illustration",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Shop page with product grid, fit confidence %, trial cart (max 5 items), and Send to Trial Hub navigation",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Trial Hub page with keep/return actions, green/red highlights, and animated confirmations",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Body Scan AI page with camera simulation, scan animation, measurement display, and size warning popup",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Wardrobe AI page with scan simulation, analytics dashboard (tops, jeans, color chart), and duplicate ownership popup",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-6",
+      "summary": "Glassmorphism UI with purple/neon blue/pink gradients, animated particles/mesh background, floating glowing buttons, and smooth page transitions",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-7",
+      "summary": "Floating animated sidebar navigation with micro-animations and fluid page transitions",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-16",
+      "summary": "Set up a basic Motoko backend actor that stores product catalog data (name, category, price, sizes, fit confidence %) and exposes query functions to retrieve product listings. The frontend should fetch products from this backend on the Shop page load.",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "FitVerse AI",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

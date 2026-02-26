@@ -1,0 +1,246 @@
+{
+  "kind": "coverage_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-26T06:27:26.311Z",
+  "sources": {
+    "buildRequest": true,
+    "implementationPlan": true
+  },
+  "requirements": {
+    "total": 9,
+    "implemented": 8,
+    "items": [
+      {
+        "id": "REQ-1",
+        "summary": "Apply a glassmorphism UI design system with soft purple, neon blue, and pink gradient accents throughout the entire app. Use animated particle/gradient mesh backgrounds, rounded corners, soft glowing shadows, clean futuristic typography, and a premium Apple + AI startup aesthetic. All buttons must have floating glow effects and micro-animations on hover. Page transitions must be smooth and fluid.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/index.css",
+          "frontend/tailwind.config.js",
+          "frontend/src/components/AnimatedBackground.tsx",
+          "frontend/src/components/GlassCard.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/index.css",
+          "frontend/tailwind.config.js",
+          "frontend/src/components/AnimatedBackground.tsx",
+          "frontend/src/components/GlassCard.tsx"
+        ]
+      },
+      {
+        "id": "REQ-2",
+        "summary": "Create a floating animated sidebar navigation component that appears on all pages (except the landing page hero) with links to: Landing, Shop, Trial Hub, Body Scan AI, and Wardrobe AI. The sidebar must have micro-animations on each nav item hover and a glowing active indicator.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/Sidebar.tsx",
+          "frontend/src/App.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/Sidebar.tsx",
+          "frontend/src/App.tsx"
+        ]
+      },
+      {
+        "id": "REQ-3",
+        "summary": "Build the Landing Page with: hero headline 'Shop Smart. Try Smart. Dress Smart.', a subheadline describing the AI-powered trial hub, body scan, and wardrobe intelligence features, three CTA buttons ('Start Shopping', 'Scan My Body', 'Scan My Wardrobe'), and an animated AI avatar illustration of a digital figure trying on clothes. Clicking 'Start Shopping' navigates to the Shop page, 'Scan My Body' navigates to the Body Scan AI page, and 'Scan My Wardrobe' navigates to the Wardrobe AI page.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/pages/Landing.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/pages/Landing.tsx"
+        ]
+      },
+      {
+        "id": "REQ-4",
+        "summary": "Build the Shop Page with a product grid containing at least 10 mock products across categories: T-shirts, Jeans, Tops, Kurtas, and Dresses. Each product card must display: product image, name, price, size selector (XS/S/M/L/XL), AI Fit Confidence % badge, and an 'Add to Trial' button. Limit trial selection to a maximum of 5 items total — once 5 are selected, disable all remaining 'Add to Trial' buttons. Show a dynamic Trial Cart side panel listing selected items. Include a 'Send to Trial Hub' button in the Trial Cart that navigates to the Trial Hub page. If the user has completed a Body Scan and selects a size that doesn't match their recommended size, show a warning popup: 'This size may not fit you. Recommended: M'. If the user has completed a Wardrobe Scan and selects a product similar to an already-owned item, show a popup: 'You already own 5 pink tops. Are you sure you want another?'",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/pages/Shop.tsx",
+          "frontend/src/components/ProductCard.tsx",
+          "frontend/src/components/TrialCart.tsx",
+          "frontend/src/components/SizeWarningDialog.tsx",
+          "frontend/src/components/WardrobeWarningDialog.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/pages/Shop.tsx",
+          "frontend/src/components/ProductCard.tsx",
+          "frontend/src/components/TrialCart.tsx",
+          "frontend/src/components/SizeWarningDialog.tsx",
+          "frontend/src/components/WardrobeWarningDialog.tsx"
+        ]
+      },
+      {
+        "id": "REQ-5",
+        "summary": "Build the Trial Hub Page that displays the up to 5 items selected from the Shop. Each item shows: product image, selected size, a 'Keep' button, and a 'Return' button. Clicking 'Keep' marks the item with a green highlight and 'Purchased' label with an animated confirmation effect. Clicking 'Return' marks the item with a red highlight and 'Returned' label with an animated confirmation effect. Use React component state to track each item's status (neutral / kept / returned).",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/pages/TrialHub.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/pages/TrialHub.tsx"
+        ]
+      },
+      {
+        "id": "REQ-6",
+        "summary": "Build the Body Scan AI Page with a simulated camera UI frame, an animated scanning overlay (e.g., pulsing scan line or ring effect), and a 'Start Scan' button. After clicking 'Start Scan', play a scan animation for a few seconds, then display detected body measurements: Shoulder, Chest, Waist, and Height (use realistic mock values). Display a recommended size result card: 'Your Ideal Size: M'. Store the recommended size in app state so the Shop page can use it to trigger size mismatch warnings.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/pages/BodyScan.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/pages/BodyScan.tsx"
+        ]
+      },
+      {
+        "id": "REQ-7",
+        "summary": "Build the Wardrobe AI Page with a simulated wardrobe scanning interface (animated camera frame or image upload zone). After triggering the scan, display an analytics dashboard showing: count of tops owned, count of jeans owned, and a color distribution chart (bar or donut chart) showing wardrobe color breakdown. Store wardrobe data in app state so the Shop page can check for duplicate item warnings (e.g., if the user already owns multiple items of the same category and color).",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/pages/Wardrobe.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/pages/Wardrobe.tsx"
+        ]
+      },
+      {
+        "id": "REQ-8",
+        "summary": "Create a shared global app state (using React Context or React Query state) to store: (1) the trial cart items (max 5), (2) the body scan recommended size, (3) the wardrobe analytics data. This shared state must persist throughout the session and be accessible across the Shop, Trial Hub, Body Scan AI, and Wardrobe AI pages.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/contexts/AppContext.tsx",
+          "frontend/src/App.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/contexts/AppContext.tsx",
+          "frontend/src/App.tsx"
+        ]
+      },
+      {
+        "id": "REQ-9",
+        "summary": "Set up a basic Motoko backend actor that stores product catalog data (name, category, price, sizes, fit confidence %) and exposes query functions to retrieve product listings. The frontend should fetch products from this backend on the Shop page load.",
+        "status": "unknown",
+        "plannedFiles": [],
+        "matchedFiles": []
+      }
+    ]
+  },
+  "changedFiles": [
+    "backend/main.mo",
+    "build-request.json",
+    "build-template/Dockerfile",
+    "build-template/LICENSE",
+    "build-template/README.md",
+    "build-template/deploy.sh",
+    "build-template/icp.yaml",
+    "build-template/package.json",
+    "build-template/pnpm-lock.yaml",
+    "build-template/pnpm-workspace.yaml",
+    "build-template/scripts/prune-unused-images.js",
+    "build-template/scripts/resize-images.js",
+    "build-template/src/backend/canister.yaml",
+    "build-template/src/backend/system-idl/aaaaa-aa.did",
+    "build-template/src/frontend/canister.yaml",
+    "build-template/src/frontend/components.json",
+    "build-template/src/frontend/env.json",
+    "build-template/src/frontend/eslint-rules/no-bigint-in-query-keys.js",
+    "build-template/src/frontend/eslint-rules/require-internet-identity-provider.js",
+    "build-template/src/frontend/eslint.config.js",
+    "build-template/src/frontend/package.json",
+    "build-template/src/frontend/postcss.config.js",
+    "build-template/src/frontend/src/components/ui/accordion.tsx",
+    "build-template/src/frontend/src/components/ui/alert-dialog.tsx",
+    "build-template/src/frontend/src/components/ui/alert.tsx",
+    "build-template/src/frontend/src/components/ui/aspect-ratio.tsx",
+    "build-template/src/frontend/src/components/ui/avatar.tsx",
+    "build-template/src/frontend/src/components/ui/badge.tsx",
+    "build-template/src/frontend/src/components/ui/breadcrumb.tsx",
+    "build-template/src/frontend/src/components/ui/button.tsx",
+    "build-template/src/frontend/src/components/ui/calendar.tsx",
+    "build-template/src/frontend/src/components/ui/card.tsx",
+    "build-template/src/frontend/src/components/ui/carousel.tsx",
+    "build-template/src/frontend/src/components/ui/chart.tsx",
+    "build-template/src/frontend/src/components/ui/checkbox.tsx",
+    "build-template/src/frontend/src/components/ui/collapsible.tsx",
+    "build-template/src/frontend/src/components/ui/command.tsx",
+    "build-template/src/frontend/src/components/ui/context-menu.tsx",
+    "build-template/src/frontend/src/components/ui/dialog.tsx",
+    "build-template/src/frontend/src/components/ui/drawer.tsx",
+    "build-template/src/frontend/src/components/ui/dropdown-menu.tsx",
+    "build-template/src/frontend/src/components/ui/form.tsx",
+    "build-template/src/frontend/src/components/ui/hover-card.tsx",
+    "build-template/src/frontend/src/components/ui/input-otp.tsx",
+    "build-template/src/frontend/src/components/ui/input.tsx",
+    "build-template/src/frontend/src/components/ui/label.tsx",
+    "build-template/src/frontend/src/components/ui/menubar.tsx",
+    "build-template/src/frontend/src/components/ui/navigation-menu.tsx",
+    "build-template/src/frontend/src/components/ui/pagination.tsx",
+    "build-template/src/frontend/src/components/ui/popover.tsx",
+    "build-template/src/frontend/src/components/ui/progress.tsx",
+    "build-template/src/frontend/src/components/ui/radio-group.tsx",
+    "build-template/src/frontend/src/components/ui/resizable.tsx",
+    "build-template/src/frontend/src/components/ui/scroll-area.tsx",
+    "build-template/src/frontend/src/components/ui/select.tsx",
+    "build-template/src/frontend/src/components/ui/separator.tsx",
+    "build-template/src/frontend/src/components/ui/sheet.tsx",
+    "build-template/src/frontend/src/components/ui/sidebar.tsx",
+    "build-template/src/frontend/src/components/ui/skeleton.tsx",
+    "build-template/src/frontend/src/components/ui/slider.tsx",
+    "build-template/src/frontend/src/components/ui/sonner.tsx",
+    "build-template/src/frontend/src/components/ui/switch.tsx",
+    "build-template/src/frontend/src/components/ui/table.tsx",
+    "build-template/src/frontend/src/components/ui/tabs.tsx",
+    "build-template/src/frontend/src/components/ui/textarea.tsx",
+    "build-template/src/frontend/src/components/ui/toggle-group.tsx",
+    "build-template/src/frontend/src/components/ui/toggle.tsx",
+    "build-template/src/frontend/src/components/ui/tooltip.tsx",
+    "build-template/src/frontend/src/hooks/use-mobile.tsx",
+    "build-template/src/frontend/src/lib/utils.ts",
+    "build-template/src/frontend/tsconfig.json",
+    "build-template/src/frontend/vite.config.js",
+    "build-template/tsconfig.json",
+    "caffeine.lock.json",
+    "feature_evidence.json",
+    "frontend-file-summaries.txt",
+    "frontend-implementation-plan.json",
+    "frontend/index.css",
+    "frontend/index.html",
+    "frontend/public/assets/generated/ai-avatar-hero.dim_600x700.png",
+    "frontend/public/assets/generated/ai-chip-icon.dim_128x128.png",
+    "frontend/public/assets/generated/body-scan-illustration.dim_400x600.png",
+    "frontend/public/assets/generated/gradient-mesh-bg.dim_1920x1080.png",
+    "frontend/public/assets/generated/wardrobe-icon.dim_128x128.png",
+    "frontend/src/App.tsx",
+    "frontend/src/backend.d.ts",
+    "frontend/src/backend.ts",
+    "frontend/src/components/AnimatedBackground.tsx",
+    "frontend/src/components/GlassCard.tsx",
+    "frontend/src/components/ProductCard.tsx",
+    "frontend/src/components/Sidebar.tsx",
+    "frontend/src/components/SizeWarningDialog.tsx",
+    "frontend/src/components/TrialCart.tsx",
+    "frontend/src/components/WardrobeWarningDialog.tsx",
+    "frontend/src/config.ts",
+    "frontend/src/contexts/AppContext.tsx",
+    "frontend/src/declarations/backend.did.d.ts",
+    "frontend/src/declarations/backend.did.js",
+    "frontend/src/hooks/useActor.ts",
+    "frontend/src/hooks/useInternetIdentity.ts",
+    "frontend/src/hooks/useQueries.ts",
+    "frontend/src/index.css",
+    "frontend/src/lib/utils.ts",
+    "frontend/src/main.tsx",
+    "frontend/src/pages/BodyScan.tsx",
+    "frontend/src/pages/Landing.tsx",
+    "frontend/src/pages/Shop.tsx",
+    "frontend/src/pages/TrialHub.tsx",
+    "frontend/src/pages/Wardrobe.tsx",
+    "frontend/src/ui-summary.json",
+    "frontend/src/utils/StorageClient.ts",
+    "frontend/tailwind.config.js",
+    "project_state.json",
+    "scratch/component-selection.json",
+    "spec.md",
+    "spec_vs_diff_report.json"
+  ]
+}
