@@ -1,60 +1,13 @@
 # Specification
 
 ## Summary
-**Goal:** Build FitVerse AI, a futuristic AI fashion e-commerce platform with glassmorphism UI, simulated AI body/wardrobe scanning, a virtual trial room, and a Motoko backend serving product data.
+**Goal:** Redesign the FitVerse AI landing page hero section to match the bold purple + iridescent morphing blob style shown in the reference image.
 
 **Planned changes:**
+- Replace the current dark/gradient hero background with a solid vivid purple (#7B2FFF) full-viewport background
+- Replace the existing blob/3D scene with a large, centrally placed iridescent morphing blob in React Three Fiber with vibrant multicolor gradients (pink, teal, yellow, orange) and a glossy/reflective surface that animates continuously without scroll interaction
+- Display a large, bold white headline centered horizontally in the hero, overlapping the blob with the text rendering above it in z-order using a rounded/geometric sans-serif at display size (≥8rem)
+- Add a minimal top navigation bar with the app name on the left and at least one nav link on the right, white text on transparent/purple background
+- Add a circular rotating text badge element below the blob with a fitness/fashion tagline, slowly rotating via CSS animation, with a sparkle/star icon centered inside the ring, styled white against the purple background
 
-### Design System
-- Glassmorphism UI with frosted glass cards, soft purple/neon blue/pink gradient palette, animated gradient mesh background on all pages
-- Futuristic clean sans-serif typography with gradient text accents
-- All buttons have floating glow effects and scale/glow micro-animations on hover
-- Smooth fade/slide page transitions
-
-### Navigation
-- Floating animated sidebar on all pages (except landing hero) with links to: Landing, Shop, Trial Hub, Body Scan AI, Wardrobe AI
-- Neon glow on hover per nav item, glowing active page indicator
-- Sidebar collapses to icons on narrow viewports
-
-### Landing Page
-- Hero headline "Shop Smart. Try Smart. Dress Smart." with gradient text
-- Subheadline describing AI-powered trial hub, body scan, and wardrobe intelligence
-- Three CTA buttons: "Start Shopping" → Shop, "Scan My Body" → Body Scan AI, "Scan My Wardrobe" → Wardrobe AI
-- Animated digital avatar illustration (continuous CSS/JS animation)
-
-### Shop Page
-- Product grid with at least 10 mock products across T-shirts, Jeans, Tops, Kurtas, Dresses categories (fetched from backend)
-- Each card: product image, name, price, size selector (XS/S/M/L/XL), AI Fit Confidence % badge, "Add to Trial" button
-- Trial cart limited to 5 items max; remaining "Add to Trial" buttons disabled after limit reached
-- Dynamic Trial Cart side panel with real-time updates and "Send to Trial Hub" button (navigates to Trial Hub)
-- Size mismatch warning popup if body scan is complete and selected size doesn't match recommended size
-- Duplicate wardrobe ownership popup if wardrobe scan is complete and a similar item is detected
-
-### Trial Hub Page
-- Displays up to 5 selected trial items (image + selected size)
-- "Keep" button: green highlight + "Purchased" label + confirmation animation
-- "Return" button: red highlight + "Returned" label + confirmation animation
-- Buttons disabled after decision made per item; state persists across session navigation
-
-### Body Scan AI Page
-- Simulated camera UI frame with animated pulsing scan line/ring overlay
-- "Start Scan" button triggers 2-3 second scan animation
-- Post-scan: measurement cards for Shoulder, Chest, Waist, Height (mock values)
-- Recommended size result card: "Your Ideal Size: M"
-- Stores recommended size in global app state
-
-### Wardrobe AI Page
-- Simulated wardrobe scanning interface (animated camera frame or upload zone)
-- After scan trigger: analytics dashboard with tops count, jeans count, and color distribution chart (bar or donut, 4-5 colors, mock data)
-- Stores wardrobe analytics data in global app state
-
-### Global State
-- React Context storing: trial cart items (max 5), body scan recommended size, wardrobe analytics data
-- State accessible across Shop, Trial Hub, Body Scan AI, and Wardrobe AI pages throughout the session
-
-### Backend (Motoko)
-- Actor storing at least 10 mock products (name, category, price, sizes array, fitConfidence %)
-- Exposes `getProducts()` query function
-- Shop page fetches and renders products from backend on load
-
-**User-visible outcome:** Users can browse AI-scored fashion products, simulate a body scan to get size recommendations, simulate a wardrobe scan to view analytics, add up to 5 items to a virtual trial cart with smart fit/ownership warnings, and make keep/return decisions in the Trial Hub — all within a premium futuristic glassmorphism UI.
+**User-visible outcome:** The landing page hero immediately shows a vivid purple full-screen background with a large iridescent 3D morphing blob, bold white display headline overlapping it, a clean top nav, and a rotating circular badge below the blob — matching the bold visual style of the reference design.

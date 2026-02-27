@@ -1,195 +1,103 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "FitVerse AI — Futuristic AI Fashion E-Commerce Platform Frontend",
+  "title": "Redesign landing page to match bold purple + iridescent blob hero style",
   "requirements": [
     {
       "id": "REQ-1",
-      "summary": "Apply glassmorphism UI design system with purple/blue/pink gradients, animated backgrounds, glowing buttons, and smooth transitions",
+      "summary": "Replace the current dark gradient hero background with a solid vivid purple (#7B2FFF) full-viewport background",
       "acceptanceCriteria": [
-        "All pages render with glassmorphism card/panel styles (frosted glass effect with blur and translucency)",
-        "Background shows animated gradient mesh or particle effect on all pages",
-        "Buttons glow and scale on hover with smooth transitions",
-        "Typography feels futuristic and clean (e.g., sharp sans-serif with gradient text accents)",
-        "Color palette consistently uses purple, neon blue, and pink gradients",
-        "Page-to-page transitions use smooth fade or slide animations"
+        "The landing page hero viewport fills entirely with a vivid purple background color",
+        "The purple background is visible immediately on page load without scrolling",
+        "No dark or near-black background is shown on the hero section"
       ],
       "file_operations": [
         {
+          "path": "frontend/src/pages/Landing.tsx",
+          "operation": "modify",
+          "description": "Remove scroll-driven gradient animation logic and replace the hero section's background with a solid vivid purple color (#7B2FFF). Remove any dynamic background color calculations based on scrollProgress. Ensure the hero container has a fixed purple background that fills the full viewport height."
+        },
+        {
           "path": "frontend/src/index.css",
           "operation": "modify",
-          "description": "Add glassmorphism utility classes, gradient text classes, glow effects, and keyframe animations for buttons and backgrounds. Define CSS custom properties for purple (#9333EA), neon blue (#06B6D4), and pink (#EC4899) with gradient combinations. Add backdrop-blur, frosted glass, and shadow utilities. Include smooth transition defaults and page transition animations."
-        },
-        {
-          "path": "frontend/tailwind.config.js",
-          "operation": "modify",
-          "description": "Extend theme with custom colors (purple-neon, blue-neon, pink-neon), glassmorphism plugin or utilities, custom shadows for glow effects, animation configs for button hover, and transition timing functions for smooth page transitions."
-        },
-        {
-          "path": "frontend/src/components/AnimatedBackground.tsx",
-          "operation": "create",
-          "description": "Create a component that renders an animated gradient mesh background using the generated gradient-mesh-bg.dim_1920x1080.png image from frontend/public/assets/generated/gradient-mesh-bg.dim_1920x1080.png as a base layer with CSS animations or canvas-based particle effects overlaid. Apply fixed positioning to cover all pages."
-        },
-        {
-          "path": "frontend/src/components/GlassCard.tsx",
-          "operation": "create",
-          "description": "Create a reusable glassmorphism card component with backdrop-blur, translucent background, border with gradient, and soft shadow. Accept className prop for customization."
+          "description": "Remove or override any CSS rules that apply dark/near-black gradients to the landing page hero section. Add a utility class or update existing hero styles to enforce the solid purple background color."
         }
       ]
     },
     {
       "id": "REQ-2",
-      "summary": "Create floating animated sidebar navigation with links to Landing, Shop, Trial Hub, Body Scan AI, and Wardrobe AI",
+      "summary": "Replace the current Web3Blob with a large centrally placed iridescent morphing blob that continuously animates without scroll interaction",
       "acceptanceCriteria": [
-        "Sidebar floats on screen and is visible across all pages",
-        "Each nav item highlights with a neon glow on hover",
-        "Active page is clearly indicated with a glowing accent",
-        "Sidebar collapses to icons on narrow viewports",
-        "Navigation between all 5 pages works correctly"
+        "A large 3D morphing blob is centered in the hero section",
+        "The blob surface shows iridescent multicolor gradients (pink, teal, yellow, orange tones)",
+        "The blob has a glossy, reflective appearance (high specularity/shininess)",
+        "The blob continuously animates/morphs without requiring scroll interaction",
+        "The blob is rendered over the purple background"
       ],
       "file_operations": [
         {
-          "path": "frontend/src/components/Sidebar.tsx",
-          "operation": "create",
-          "description": "Create a floating sidebar component with nav links to /, /shop, /trial-hub, /body-scan, and /wardrobe. Use React Router's NavLink for active state detection. Apply glassmorphism styling, neon glow on hover, and responsive collapse to icon-only on mobile. Include micro-animations using CSS transitions or Framer Motion."
+          "path": "frontend/src/pages/Landing.tsx",
+          "operation": "modify",
+          "description": "Replace the Web3Blob/ScrollDriven3DScene component with the ContinuousRotatingBlob component. Position the blob canvas at the center of the hero section, layered behind the headline text (lower z-index). Remove scroll-based props and ensure the blob animates continuously on its own. Size the blob to be large and prominent within the hero viewport."
         },
         {
-          "path": "frontend/src/App.tsx",
+          "path": "frontend/src/components/ContinuousRotatingBlob.tsx",
           "operation": "modify",
-          "description": "Import and render Sidebar component as a persistent navigation element. Wrap routes with AnimatedBackground component. Set up React Router with routes for Landing (/), Shop (/shop), Trial Hub (/trial-hub), Body Scan AI (/body-scan), and Wardrobe AI (/wardrobe). Ensure Sidebar is rendered outside route outlet so it persists across pages."
+          "description": "Enhance the blob's material to display vibrant iridescent multicolor gradients (pink, teal, yellow, orange). Increase specularity and shininess properties on the MeshStandardMaterial to achieve a glossy, reflective surface. Ensure the blob continuously morphs and rotates without external input. Adjust point light colors and intensity to emphasize the iridescent effect."
         }
       ]
     },
     {
       "id": "REQ-3",
-      "summary": "Build Landing Page with hero headline, subheadline, three CTAs, and animated AI avatar illustration",
+      "summary": "Display large bold white sans-serif headline text centered horizontally, overlapping the blob in z-order",
       "acceptanceCriteria": [
-        "Hero headline renders prominently with gradient text styling",
-        "Subheadline is concise and clearly communicates three AI features",
-        "All three CTA buttons navigate to the correct pages",
-        "Animated avatar illustration plays continuously (CSS or JS animation)",
-        "Landing page has no sidebar or uses a minimal top nav variant"
+        "A large bold white headline is displayed centered in the hero, overlapping the blob visually",
+        "The font is a rounded/geometric sans-serif style at a display size (at least 8rem or equivalent)",
+        "The text renders above the blob in z-order"
       ],
       "file_operations": [
         {
           "path": "frontend/src/pages/Landing.tsx",
-          "operation": "create",
-          "description": "Create Landing page component with hero section containing headline 'Shop Smart. Try Smart. Dress Smart.' styled with gradient text, a subheadline describing AI-powered trial hub, body scan, and wardrobe intelligence, and three CTA buttons ('Start Shopping' → /shop, 'Scan My Body' → /body-scan, 'Scan My Wardrobe' → /wardrobe). Include the animated AI avatar using the generated image frontend/public/assets/generated/ai-avatar-hero.dim_600x700.png with CSS animation (floating or pulse effect). Apply glassmorphism styling to hero card. Hide Sidebar on this page or use conditional rendering."
+          "operation": "modify",
+          "description": "Update the hero headline to use a large display font size (at least 8rem), bold weight, white color, and a rounded/geometric sans-serif typeface (e.g., Syne or similar). Position the headline absolutely or relatively at the center of the hero with a higher z-index than the blob canvas, ensuring it visually overlaps the blob. Remove any scroll-driven text color or size animations that conflict with the static white appearance."
         }
       ]
     },
     {
       "id": "REQ-4",
-      "summary": "Build Shop Page with product grid (10+ items), size selectors, AI fit confidence badges, trial cart (max 5 items), and warning popups for size/wardrobe mismatches",
+      "summary": "Add a minimal top navigation bar with app name on the left and at least one nav link on the right, styled in white on purple",
       "acceptanceCriteria": [
-        "Product grid displays at least 10 items with category labels",
-        "Each card shows image, name, price, size selector, fit confidence badge, and Add to Trial button",
-        "After 5 items added, all remaining Add to Trial buttons are disabled with a visual indicator",
-        "Trial Cart side panel updates in real time as items are added",
-        "Send to Trial Hub button navigates to Trial Hub page and passes selected items",
-        "Size warning popup appears when a size mismatching the body scan recommendation is selected",
-        "Wardrobe duplicate ownership popup appears correctly based on wardrobe scan state"
+        "A top nav bar is visible on the landing page with brand name on the left",
+        "At least one nav link appears on the right side",
+        "Nav text is white and background is transparent over the purple hero"
       ],
       "file_operations": [
         {
-          "path": "frontend/src/pages/Shop.tsx",
-          "operation": "create",
-          "description": "Create Shop page component that fetches products from backend using getAllProducts() on mount. Render a responsive product grid with at least 10 items. Each product card displays image, name, price, size selector (XS/S/M/L/XL radio or dropdown), AI Fit Confidence % badge, and 'Add to Trial' button. Use shared app state (from context) to manage trial cart items (max 5). Disable all Add to Trial buttons once 5 items are selected. Check body scan recommended size state and show warning popup if selected size mismatches. Check wardrobe data state and show ownership duplicate popup if product category/color matches existing items. Render Trial Cart side panel component."
-        },
-        {
-          "path": "frontend/src/components/ProductCard.tsx",
-          "operation": "create",
-          "description": "Create ProductCard component accepting product data, size selection handler, and Add to Trial handler. Render glassmorphism card with product image, name, price, size selector, fit confidence badge, and Add to Trial button with glow effect. Disable button if trial cart is full or item already added."
-        },
-        {
-          "path": "frontend/src/components/TrialCart.tsx",
-          "operation": "create",
-          "description": "Create TrialCart side panel component that displays selected trial items from shared state. Show each item with image, name, and selected size. Include a 'Send to Trial Hub' button that navigates to /trial-hub. Apply glassmorphism styling and slide-in animation."
-        },
-        {
-          "path": "frontend/src/components/SizeWarningDialog.tsx",
-          "operation": "create",
-          "description": "Create a dialog component that displays size mismatch warning: 'This size may not fit you. Recommended: M'. Accept open state, onClose handler, and recommended size as props. Use glassmorphism styling and glow effects."
-        },
-        {
-          "path": "frontend/src/components/WardrobeWarningDialog.tsx",
-          "operation": "create",
-          "description": "Create a dialog component that displays wardrobe duplicate warning: 'You already own 5 pink tops. Are you sure you want another?'. Accept open state, onClose handler, and ownership message as props. Use glassmorphism styling."
+          "path": "frontend/src/pages/Landing.tsx",
+          "operation": "modify",
+          "description": "Add a minimal top navigation bar component at the top of the Landing page. Position the app name (FitVerse AI or similar) on the left and at least one navigation link (e.g., 'About') on the right. Style the nav text in white with a transparent or purple-tinted background that sits over the purple hero without blocking the view. Use flexbox or grid for horizontal layout."
         }
       ]
     },
     {
       "id": "REQ-5",
-      "summary": "Build Trial Hub Page displaying up to 5 selected items with Keep/Return buttons and animated confirmation effects",
+      "summary": "Add a circular rotating text badge below the blob with a centered star/sparkle icon",
       "acceptanceCriteria": [
-        "All selected trial items are displayed with image and size",
-        "Keep button turns card green with 'Purchased' label and plays a confirmation animation",
-        "Return button turns card red with 'Returned' label and plays a confirmation animation",
-        "Both buttons are disabled after a decision is made for that item",
-        "State persists within the session (not lost on navigation within the app)"
+        "A circular text badge element is rendered below the blob in the hero",
+        "The text rotates slowly as a CSS animation",
+        "A small icon (star/sparkle) is centered inside the circular text ring",
+        "The element is white/light colored against the purple background"
       ],
       "file_operations": [
         {
-          "path": "frontend/src/pages/TrialHub.tsx",
+          "path": "frontend/src/components/CircularTextBadge.tsx",
           "operation": "create",
-          "description": "Create Trial Hub page component that reads selected trial items from shared app state. Render each item with product image, name, selected size, 'Keep' button, and 'Return' button. Use local state to track each item's status (neutral/kept/returned). On Keep click, apply green highlight, show 'Purchased' label, play confirmation animation (scale pulse or checkmark), and disable both buttons. On Return click, apply red highlight, show 'Returned' label, play confirmation animation, and disable both buttons. Apply glassmorphism styling to item cards."
-        }
-      ]
-    },
-    {
-      "id": "REQ-6",
-      "summary": "Build Body Scan AI Page with simulated camera UI, scan animation, detected measurements, and recommended size result",
-      "acceptanceCriteria": [
-        "Camera frame UI renders with a realistic simulated feed area",
-        "Scan animation plays for at least 2-3 seconds after clicking Start Scan",
-        "After animation, measurement cards for Shoulder, Chest, Waist, and Height appear with values",
-        "Recommended size card clearly shows 'Your Ideal Size: M'",
-        "Recommended size is stored in global/shared state accessible by the Shop page"
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/pages/BodyScan.tsx",
-          "operation": "create",
-          "description": "Create Body Scan AI page component with a simulated camera UI frame using the generated body-scan-illustration.dim_400x600.png image from frontend/public/assets/generated/body-scan-illustration.dim_400x600.png. Include a 'Start Scan' button with glow effect. On click, play a 2-3 second scan animation (pulsing scan line or ring overlay using CSS keyframes). After animation completes, display measurement cards for Shoulder (e.g., 18in), Chest (e.g., 40in), Waist (e.g., 32in), and Height (e.g., 5'10\") using mock values. Show a recommended size result card: 'Your Ideal Size: M'. Store the recommended size ('M') in shared app state context so Shop page can access it. Apply glassmorphism styling to all cards."
-        }
-      ]
-    },
-    {
-      "id": "REQ-7",
-      "summary": "Build Wardrobe AI Page with simulated wardrobe scanning interface and analytics dashboard showing tops/jeans count and color distribution chart",
-      "acceptanceCriteria": [
-        "Wardrobe scan interface renders with animated camera or upload zone",
-        "After scan trigger, analytics dashboard appears with tops count, jeans count, and color chart",
-        "Color distribution chart renders correctly with mock data (at least 4-5 colors)",
-        "Wardrobe state is stored globally and accessible by the Shop page for ownership warnings"
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/pages/Wardrobe.tsx",
-          "operation": "create",
-          "description": "Create Wardrobe AI page component with a simulated wardrobe scanning interface using the generated wardrobe-icon.dim_128x128.png image from frontend/public/assets/generated/wardrobe-icon.dim_128x128.png as part of the camera frame or upload zone. Include a 'Start Scan' button. On click, play a short scan animation, then display an analytics dashboard showing: count of tops owned (e.g., 12), count of jeans owned (e.g., 5), and a color distribution chart (use a simple bar or donut chart library or SVG) with mock data for 4-5 colors (e.g., pink: 5, blue: 3, black: 2, white: 2). Store wardrobe data (tops count, jeans count, color breakdown) in shared app state so Shop page can check for duplicate warnings. Apply glassmorphism styling to dashboard cards."
-        }
-      ]
-    },
-    {
-      "id": "REQ-8",
-      "summary": "Create shared global app state (React Context) to store trial cart items, body scan recommended size, and wardrobe analytics data",
-      "acceptanceCriteria": [
-        "Trial cart state is shared between Shop and Trial Hub pages",
-        "Body scan recommended size is accessible in Shop for warning popups",
-        "Wardrobe data is accessible in Shop for ownership duplicate warnings",
-        "State does not reset when navigating between pages within the session"
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/contexts/AppContext.tsx",
-          "operation": "create",
-          "description": "Create a React Context (AppContext) that provides global state for: (1) trialCartItems (array of selected products with sizes, max 5), (2) bodyScanRecommendedSize (string, e.g., 'M'), (3) wardrobeData (object with tops count, jeans count, color distribution). Provide setter functions for each state. Export AppProvider component and useAppContext hook. Use useState to manage state (persists within session, no localStorage required)."
+          "description": "Create a new CircularTextBadge component that renders a circular text ring with a tagline (e.g., 'AI-POWERED FASHION · PERFECT FIT EVERY TIME ·'). Use SVG or CSS transforms to arrange text characters in a circle. Apply a continuous CSS rotation animation (e.g., rotate 360deg over 20s). Position a small star or sparkle icon at the center of the circle. Style the text and icon in white or light color for contrast against the purple background."
         },
         {
-          "path": "frontend/src/App.tsx",
+          "path": "frontend/src/pages/Landing.tsx",
           "operation": "modify",
-          "description": "Import AppProvider from contexts/AppContext and wrap the entire app (including router) with AppProvider to make global state accessible across all pages."
+          "description": "Import and render the new CircularTextBadge component in the hero section, positioned below the blob (either absolutely or in a flex layout). Ensure it is layered above the blob canvas but below or aligned with other hero elements as appropriate."
         }
       ]
     }

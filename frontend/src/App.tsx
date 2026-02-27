@@ -20,11 +20,10 @@ function AppLayout() {
   );
 }
 
-// Landing layout without sidebar
+// Landing layout — no AnimatedBackground so the scroll-driven gradient is visible
 function LandingLayout() {
   return (
-    <div className="min-h-screen">
-      <AnimatedBackground />
+    <div>
       <Outlet />
     </div>
   );

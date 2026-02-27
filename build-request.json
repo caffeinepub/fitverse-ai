@@ -1,242 +1,114 @@
 {
   "kind": "build_request",
-  "title": "FitVerse AI — Futuristic AI Fashion E-Commerce Platform",
+  "title": "Redesign landing page to match bold purple + iridescent blob hero style",
   "projectName": "FitVerse AI",
   "priority": "normal",
   "requirements": [
     {
       "id": "REQ-1",
-      "text": "Apply a glassmorphism UI design system with soft purple, neon blue, and pink gradient accents throughout the entire app. Use animated particle/gradient mesh backgrounds, rounded corners, soft glowing shadows, clean futuristic typography, and a premium Apple + AI startup aesthetic. All buttons must have floating glow effects and micro-animations on hover. Page transitions must be smooth and fluid.",
+      "text": "Redesign the Landing page hero section with a solid vivid purple (#7B2FFF or similar) full-viewport background, replacing the current dark/near-black gradient and scroll-driven color transitions.",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-2"
+          "msg-4"
         ],
         "quotes": [
-          "Ultra-modern AI SaaS aesthetic",
-          "Glassmorphism UI",
-          "Soft purple, neon blue and pink gradient accents",
-          "Smooth animations and hover effects",
-          "Floating glowing buttons",
-          "Animated background particles or gradient mesh",
-          "Premium startup feel (like Apple + AI startup combined)"
+          "like this make"
         ]
       },
       "acceptanceCriteria": [
-        "All pages render with glassmorphism card/panel styles (frosted glass effect with blur and translucency)",
-        "Background shows animated gradient mesh or particle effect on all pages",
-        "Buttons glow and scale on hover with smooth transitions",
-        "Typography feels futuristic and clean (e.g., sharp sans-serif with gradient text accents)",
-        "Color palette consistently uses purple, neon blue, and pink gradients",
-        "Page-to-page transitions use smooth fade or slide animations"
+        "The landing page hero viewport fills entirely with a vivid purple background color",
+        "The purple background is visible immediately on page load without scrolling",
+        "No dark or near-black background is shown on the hero section"
       ]
     },
     {
       "id": "REQ-2",
-      "text": "Create a floating animated sidebar navigation component that appears on all pages (except the landing page hero) with links to: Landing, Shop, Trial Hub, Body Scan AI, and Wardrobe AI. The sidebar must have micro-animations on each nav item hover and a glowing active indicator.",
+      "text": "Replace the current Web3Blob/ScrollDriven3DScene blob with a large, centrally placed iridescent morphing blob rendered in React Three Fiber. The blob should display vibrant multicolor gradients (pink, teal, yellow, orange) with a glossy/reflective surface, positioned at the center of the hero and rendered on top of the purple background.",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-2"
+          "msg-4"
         ],
         "quotes": [
-          "Floating animated sidebar",
-          "Smooth transitions between pages",
-          "Micro-animations on buttons"
+          "like this make"
         ]
       },
       "acceptanceCriteria": [
-        "Sidebar floats on screen and is visible across all pages",
-        "Each nav item highlights with a neon glow on hover",
-        "Active page is clearly indicated with a glowing accent",
-        "Sidebar collapses to icons on narrow viewports",
-        "Navigation between all 5 pages works correctly"
+        "A large 3D morphing blob is centered in the hero section",
+        "The blob surface shows iridescent multicolor gradients (pink, teal, yellow, orange tones)",
+        "The blob has a glossy, reflective appearance (high specularity/shininess)",
+        "The blob continuously animates/morphs without requiring scroll interaction",
+        "The blob is rendered over the purple background"
       ]
     },
     {
       "id": "REQ-3",
-      "text": "Build the Landing Page with: hero headline 'Shop Smart. Try Smart. Dress Smart.', a subheadline describing the AI-powered trial hub, body scan, and wardrobe intelligence features, three CTA buttons ('Start Shopping', 'Scan My Body', 'Scan My Wardrobe'), and an animated AI avatar illustration of a digital figure trying on clothes. Clicking 'Start Shopping' navigates to the Shop page, 'Scan My Body' navigates to the Body Scan AI page, and 'Scan My Wardrobe' navigates to the Wardrobe AI page.",
+      "text": "Display the app's hero headline text (large, bold, white, sans-serif) centered horizontally across the hero section, overlapping the blob in the z-axis so the blob appears behind or through the text — matching the large typographic treatment in the reference image.",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-2"
+          "msg-4"
         ],
         "quotes": [
-          "Hero headline: 'Shop Smart. Try Smart. Dress Smart.'",
-          "Subheadline explaining AI-powered trial hub + body scan + wardrobe intelligence",
-          "Animated AI illustration of a digital avatar trying clothes"
+          "like this make"
         ]
       },
       "acceptanceCriteria": [
-        "Hero headline renders prominently with gradient text styling",
-        "Subheadline is concise and clearly communicates three AI features",
-        "All three CTA buttons navigate to the correct pages",
-        "Animated avatar illustration plays continuously (CSS or JS animation)",
-        "Landing page has no sidebar or uses a minimal top nav variant"
+        "A large bold white headline is displayed centered in the hero, overlapping the blob visually",
+        "The font is a rounded/geometric sans-serif style at a display size (at least 8rem or equivalent)",
+        "The text renders above the blob in z-order"
       ]
     },
     {
       "id": "REQ-4",
-      "text": "Build the Shop Page with a product grid containing at least 10 mock products across categories: T-shirts, Jeans, Tops, Kurtas, and Dresses. Each product card must display: product image, name, price, size selector (XS/S/M/L/XL), AI Fit Confidence % badge, and an 'Add to Trial' button. Limit trial selection to a maximum of 5 items total — once 5 are selected, disable all remaining 'Add to Trial' buttons. Show a dynamic Trial Cart side panel listing selected items. Include a 'Send to Trial Hub' button in the Trial Cart that navigates to the Trial Hub page. If the user has completed a Body Scan and selects a size that doesn't match their recommended size, show a warning popup: 'This size may not fit you. Recommended: M'. If the user has completed a Wardrobe Scan and selects a product similar to an already-owned item, show a popup: 'You already own 5 pink tops. Are you sure you want another?'",
+      "text": "Add a minimal top navigation bar with the app name on the left and at least one nav link on the right (e.g., 'About'), styled in white text on the purple background — matching the sparse navigation shown in the reference image.",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-2"
+          "msg-4"
         ],
         "quotes": [
-          "Product grid: T-shirts, Jeans, Tops, Kurtas, Dresses",
-          "Fit Confidence %",
-          "Limit trial selection to maximum 5 items",
-          "Show dynamic Trial Cart panel on side",
-          "Send to Trial Hub → navigate to Trial Hub page",
-          "Show warning popup: 'This size may not fit you. Recommended: M'",
-          "Show popup: 'You already own 5 pink tops. Are you sure you want another?'"
+          "like this make"
         ]
       },
       "acceptanceCriteria": [
-        "Product grid displays at least 10 items with category labels",
-        "Each card shows image, name, price, size selector, fit confidence badge, and Add to Trial button",
-        "After 5 items added, all remaining Add to Trial buttons are disabled with a visual indicator",
-        "Trial Cart side panel updates in real time as items are added",
-        "Send to Trial Hub button navigates to Trial Hub page and passes selected items",
-        "Size warning popup appears when a size mismatching the body scan recommendation is selected",
-        "Wardrobe duplicate ownership popup appears correctly based on wardrobe scan state"
+        "A top nav bar is visible on the landing page with brand name on the left",
+        "At least one nav link appears on the right side",
+        "Nav text is white and background is transparent over the purple hero"
       ]
     },
     {
       "id": "REQ-5",
-      "text": "Build the Trial Hub Page that displays the up to 5 items selected from the Shop. Each item shows: product image, selected size, a 'Keep' button, and a 'Return' button. Clicking 'Keep' marks the item with a green highlight and 'Purchased' label with an animated confirmation effect. Clicking 'Return' marks the item with a red highlight and 'Returned' label with an animated confirmation effect. Use React component state to track each item's status (neutral / kept / returned).",
+      "text": "Add a circular rotating badge/label element below the blob (similar to the circular text ring reading 'CREATE AND MINT YOUR NFT · DONATE FOR A GOOD CAUSE ·' in the reference), adapted to the app's context (e.g., fitness/fashion tagline), with a small star or sparkle icon at center.",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-2"
+          "msg-4"
         ],
         "quotes": [
-          "Show selected items",
-          "Keep button → mark as Purchased (green highlight)",
-          "Return button → mark as Returned (red highlight)",
-          "Show animated confirmation"
+          "like this make"
         ]
       },
       "acceptanceCriteria": [
-        "All selected trial items are displayed with image and size",
-        "Keep button turns card green with 'Purchased' label and plays a confirmation animation",
-        "Return button turns card red with 'Returned' label and plays a confirmation animation",
-        "Both buttons are disabled after a decision is made for that item",
-        "State persists within the session (not lost on navigation within the app)"
-      ]
-    },
-    {
-      "id": "REQ-6",
-      "text": "Build the Body Scan AI Page with a simulated camera UI frame, an animated scanning overlay (e.g., pulsing scan line or ring effect), and a 'Start Scan' button. After clicking 'Start Scan', play a scan animation for a few seconds, then display detected body measurements: Shoulder, Chest, Waist, and Height (use realistic mock values). Display a recommended size result card: 'Your Ideal Size: M'. Store the recommended size in app state so the Shop page can use it to trigger size mismatch warnings.",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-2"
-        ],
-        "quotes": [
-          "Show camera UI simulation",
-          "Animated scanning overlay effect",
-          "Button: 'Start Scan'",
-          "Display detected measurements: Shoulder, Chest, Waist, Height",
-          "Show recommended size result: 'Your Ideal Size: M'",
-          "If user tries selecting wrong size later: Show warning popup"
-        ]
-      },
-      "acceptanceCriteria": [
-        "Camera frame UI renders with a realistic simulated feed area",
-        "Scan animation plays for at least 2-3 seconds after clicking Start Scan",
-        "After animation, measurement cards for Shoulder, Chest, Waist, and Height appear with values",
-        "Recommended size card clearly shows 'Your Ideal Size: M'",
-        "Recommended size is stored in global/shared state accessible by the Shop page"
-      ]
-    },
-    {
-      "id": "REQ-7",
-      "text": "Build the Wardrobe AI Page with a simulated wardrobe scanning interface (animated camera frame or image upload zone). After triggering the scan, display an analytics dashboard showing: count of tops owned, count of jeans owned, and a color distribution chart (bar or donut chart) showing wardrobe color breakdown. Store wardrobe data in app state so the Shop page can check for duplicate item warnings (e.g., if the user already owns multiple items of the same category and color).",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-2"
-        ],
-        "quotes": [
-          "Simulated wardrobe scanning interface",
-          "Animated image upload or camera frame",
-          "Display analytics dashboard: Number of tops, Number of jeans, Color distribution chart",
-          "Show popup: 'You already own 5 pink tops. Are you sure you want another?'"
-        ]
-      },
-      "acceptanceCriteria": [
-        "Wardrobe scan interface renders with animated camera or upload zone",
-        "After scan trigger, analytics dashboard appears with tops count, jeans count, and color chart",
-        "Color distribution chart renders correctly with mock data (at least 4-5 colors)",
-        "Wardrobe state is stored globally and accessible by the Shop page for ownership warnings"
-      ]
-    },
-    {
-      "id": "REQ-8",
-      "text": "Create a shared global app state (using React Context or React Query state) to store: (1) the trial cart items (max 5), (2) the body scan recommended size, (3) the wardrobe analytics data. This shared state must persist throughout the session and be accessible across the Shop, Trial Hub, Body Scan AI, and Wardrobe AI pages.",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-2"
-        ],
-        "quotes": [
-          "Use component states for: Added to trial, Kept, Returned, Size warning popup"
-        ]
-      },
-      "acceptanceCriteria": [
-        "Trial cart state is shared between Shop and Trial Hub pages",
-        "Body scan recommended size is accessible in Shop for warning popups",
-        "Wardrobe data is accessible in Shop for ownership duplicate warnings",
-        "State does not reset when navigating between pages within the session"
-      ]
-    },
-    {
-      "id": "REQ-9",
-      "text": "Set up a basic Motoko backend actor that stores product catalog data (name, category, price, sizes, fit confidence %) and exposes query functions to retrieve product listings. The frontend should fetch products from this backend on the Shop page load.",
-      "target": "backend",
-      "source": {
-        "messageIds": [
-          "msg-2"
-        ],
-        "quotes": [
-          "Product grid: T-shirts, Jeans, Tops, Kurtas, Dresses",
-          "Each product card must show: Image, Name, Price, Size options, Fit Confidence %"
-        ]
-      },
-      "acceptanceCriteria": [
-        "Backend actor stores at least 10 mock products with name, category, price, sizes array, and fitConfidence fields",
-        "Backend exposes a query function getProducts() that returns all products",
-        "Frontend Shop page calls getProducts() and renders the returned data",
-        "Products load correctly and display in the product grid"
+        "A circular text badge element is rendered below the blob in the hero",
+        "The text rotates slowly as a CSS animation",
+        "A small icon (star/sparkle) is centered inside the circular text ring",
+        "The element is white/light colored against the purple background"
       ]
     }
   ],
   "constraints": [
-    "Use purple, neon blue, and pink as the primary color palette — do not deviate to other color schemes",
-    "Trial cart must be hard-limited to exactly 5 items maximum",
-    "All page navigation must use client-side routing (no full page reloads)",
-    "Body scan and wardrobe scan are simulated — no real camera API or file upload processing required",
-    "Do not edit any files under frontend/src/hooks/ or frontend/src/components/ui"
+    "Do not modify files under frontend/src/hooks/ or frontend/src/components/ui/",
+    "Keep all existing backend logic unchanged"
   ],
   "nonGoals": [
-    "Real camera or biometric body scanning",
-    "Actual payment processing or checkout flow",
-    "User authentication or account management",
-    "Real-time inventory management",
-    "Backend persistence of trial cart, body scan, or wardrobe data",
-    "Mobile app or PWA features",
-    "Integration with any external fashion or e-commerce APIs"
+    "Changing any backend data models or product logic",
+    "Redesigning inner app pages (Shop, TrialHub, Wardrobe, BodyScan)",
+    "Adding new backend endpoints"
   ],
   "imageRequirements": {
-    "required": [
-      "Futuristic digital humanoid avatar in a glowing purple-blue gradient outfit, standing with arms slightly out, surrounded by holographic clothing particles — centered on a dark background (ai-avatar-hero.dim_600x700.png)",
-      "Abstract animated-style gradient mesh background with deep purple, electric blue, and hot pink flowing colors — wide format (gradient-mesh-bg.dim_1920x1080.png)",
-      "Stylized neon clothing hanger icon with a glowing pink-blue gradient outline on transparent background (wardrobe-icon.dim_128x128.png)",
-      "Futuristic body scan silhouette outline glowing in neon blue on a dark background, with scan lines and measurement markers (body-scan-illustration.dim_400x600.png)",
-      "Abstract AI chip / neural network icon with neon purple and blue circuit lines on transparent background (ai-chip-icon.dim_128x128.png)"
-    ],
+    "required": [],
     "edits": []
   }
 }
